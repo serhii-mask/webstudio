@@ -15,7 +15,7 @@
 			<a href="./index.html" class="logo"><span class="span-logo">Web</span>Studio</a>
 			<nav>
 				<ul class="site-nav list">
-					<li class="item"><a href="./index.html" class="link">Студія</a></li>
+					<li class="item"><a href="./index.html" class="active-link link">Студія</a><div class="active"></div></li>
 					<li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
 					<li class="item"><a href="" class="link">Контакти</a></li>
 				</ul>
@@ -40,7 +40,7 @@
 	<section class="hero">
 		<div class="container">
 			<h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-		<button class="hero-button">Замовити послугу</button>
+		<button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
 		</div>
 	</section>
 	
@@ -93,13 +93,24 @@
 			<h2 class="title">Чим ми займаємося</h2>
 		<ul class="activity-list list">
 			<li class="item">
-				<img src="./images/img_1.jpg" alt="Крупним планом зображення програміста який працює за своїм столом" width="370">
+				<div class="activity-image">
+					<img src="./images/img_1.jpg" alt="Крупним планом зображення програміста який працює за своїм столом" width="370">
+					<p class="activity-text">Десктопні додатки</p>
+				</div>
 			</li>
 			<li class="item">
-				<img src="./images/img_2.jpg" alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" width="370">
+				<div class="activity-image">
+					<img src="./images/img_2.jpg" alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" width="370">
+					<p class="activity-text">Мобільні додатки</p>
+				</div>
 			</li>
 			<li class="item">
-				<img src="./images/img_3.jpg" alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" width="370">
+				<div class="activity-image">
+					<img src="./images/img_3.jpg" alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" width="370">
+					<p class="activity-text">Дизайнерські рішення
+
+					</p>
+				</div>
 			</li>
 		</ul>
 		</div>
@@ -303,7 +314,7 @@
 				</a>
 				<address class="address">
 					<ul class="address-list list">
-						<li class="item">м. Київ, пр-т Лесі Українки, 26</li>
+						<li class="item"><a href="" class="sity link">м. Київ, пр-т Лесі Українки, 26</a></li>
 						<li class="item"><a href="" class="link">info@devstudio.com</a></li>
 						<li class="item"><a href="" class="link">+38 097 777 77 77</a></li>
 					</ul>
@@ -340,6 +351,16 @@
 			</div>
 		</div>
 	</footer>
+	<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button class="modal-close" data-modal-close>
+					<svg class="close-icon" width="11" height="11">
+						<use href="./images/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+	</div>
+	<script src="./js/modal.js"></script>
 </body>
 </html>
 
