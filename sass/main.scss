@@ -1,0 +1,37 @@
+// ПЕРЕМЕННЫЕ
+@import './utils/variables';
+
+// СБРОС СТИЛЕЙ
+@import './base/modern-normalize';
+@import './base/reset';
+
+// ОБЩИЕ СТИЛИ
+@import './components/header';
+
+@import './components/logo';
+
+@import './components/navigation';
+
+@import './components/hero';
+
+@import './components/features';
+
+@import './components/activity';
+
+@import './components/team';
+
+@import './components/social';
+
+@import './components/client';
+
+@import './components/footer';
+
+@import './components/footer-form';
+
+@import './components/modal';
+
+@import './components/modal-form';
+
+@import './components/filter';
+
+@import './components/projects';
