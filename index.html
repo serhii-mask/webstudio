@@ -12,31 +12,72 @@
 	<header class="header">
 		<div class="container header__flex">
 			<a href="./index.html" class="logo" lang="en"><span class="logo__span">Web</span>Studio</a>
-			<nav>
-				<ul class="site-nav">
-					<li class="site-nav__item">
-						<a href="./index.html" class="site-nav__link site-nav__link--active">Студія</a></li>
-					<li class="site-nav__item">
-						<a href="./portfolio.html" class="site-nav__link">Портфоліо</a></li>
-					<li class="site-nav__item">
-						<a href="" class="site-nav__link">Контакти</a></li>
-				</ul>
-			</nav>
 			
-			<ul class="auth-nav">
-				<li class="auth-nav__item">
-					<a href="mailto:info@devstudio.com" class="auth-nav__link">
-					<svg class="auth-nav__icon-email" width="16" height="12">
-						<use href="./images/sprite.svg#icon-email"></use>
+			<div class="header__navigation site-menu" id="header-navigation">
+				<button type="button" 
+					class="menu-button menu-button--close">
+					<svg
+						class="icon-burger" 
+						width="40" 
+						height="40"
+						aria-label="Кнопка закриття мобільного меню"
+					>
+						<use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
 					</svg>
-					info@devstudio.com</a></li>
-				<li class="auth-nav__item">
-					<a href="tel:380977777777" class="auth-nav__link">
-					<svg class="auth-nav__icon-phone" width="10" height="16">
-						<use href="./images/sprite.svg#icon-phone"></use>
-					</svg>
-					+38 097 777 77 77</a></li>
-			</ul>
+				</button>
+				<nav>
+					<ul class="site-nav">
+						<li class="site-nav__item">
+							<a href="./index.html" class="site-nav__link site-nav__link--active">Студія</a></li>
+						<li class="site-nav__item">
+							<a href="./portfolio.html" class="site-nav__link">Портфоліо</a></li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Контакти</a></li>
+					</ul>
+				</nav>
+				
+				<ul class="auth-nav">
+					<li class="auth-nav__item">
+						<a href="mailto:info@devstudio.com" class="auth-nav__link email-link">
+						<svg class="auth-nav__icon-email" width="16" height="12">
+							<use href="./images/sprite.svg#icon-email"></use>
+						</svg>
+						info@devstudio.com</a></li>
+					<li class="auth-nav__item">
+						<a href="tel:380977777777" class="auth-nav__link phone-link">
+						<svg class="auth-nav__icon-phone" width="10" height="16">
+							<use href="./images/sprite.svg#icon-phone"></use>
+						</svg>
+						+38 097 777 77 77</a></li>
+				</ul>
+				<ul class="menu-social">
+					<li class="menu-social__item">
+						<a href="" class="menu-social__link">Instagram</a>
+					</li>
+					<li class="menu-social__item">
+						<a href="" class="menu-social__link">Twitter</a>
+					</li>
+					<li class="menu-social__item">
+						<a href="" class="menu-social__link">Facebook</a>
+					</li>
+					<li class="menu-social__item">
+						<a href="" class="menu-social__link">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+			<button type="button" 
+				class="menu-button menu-button--open"
+				aria-expanded="false"
+				aria-controls="header-navigation">
+				<svg
+					class="icon-burger" 
+					width="40" 
+					height="40"
+					aria-label="Кнопка відкриття мобільного меню"
+				>
+					<use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+				</svg>
+			</button>
 		</div>
 	</header>
 <!-- Тіло сайту -->
@@ -44,7 +85,7 @@
 	<section class="hero">
 		<div class="container">
 			<h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-		<button class="hero__button" type="button" data-modal-open>Замовити послугу</button>
+			<button class="hero__button" type="button" data-modal-open>Замовити послугу</button>
 		</div>
 	</section>
 	
@@ -98,19 +139,49 @@
 		<ul class="activity__list">
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_1.jpg" alt="Крупним планом зображення програміста який працює за своїм столом" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-01_d.jpg    1x,
+							./images/image/activity/activity-01_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-01_d.jpg" 
+						alt="Крупним планом зображення програміста який працює за своїм столом" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Десктопні додатки</p>
 				</div>
 			</li>
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_2.jpg" alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-02_d.jpg    1x,
+							./images/image/activity/activity-02_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-02_d.jpg" 
+						alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Мобільні додатки</p>
 				</div>
 			</li>
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_3.jpg" alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-03_d.jpg    1x,
+							./images/image/activity/activity-03_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-03_d.jpg" 
+						alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Дизайнерські рішення</p>
 				</div>
 			</li>
@@ -123,7 +194,20 @@
 			<h2 class="team__title">Наша команда</h2>
 		<ul class="team__list">
 			<li class="team__card card">
-				<img src="./images/igor.jpg" alt="Фото Ігора Дем'яненко">
+				<img 
+					srcset="
+               	./images/image/team/team-01_d.jpg    270w,
+               	./images/image/team/team-01_t.jpg    354w,
+               	./images/image/team/team-01_m.jpg    450w,
+               	./images/image/team/team-01_d@2x.jpg 540w,
+                  ./images/image/team/team-01_t@2x.jpg 708w,
+                  ./images/image/team/team-01_m@2x.jpg 900w
+               "
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+               src="./images/image/team/team-01_m.jpg "
+					alt="Фото Ігора Дем'яненко"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Ігор Дем'яненко</h3>
 					<p lang="en" class="card__speciality">Product Designer</p>
@@ -156,7 +240,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/olga.jpg" alt="Фото Ольги Рєпіної">
+				<img 
+					srcset="
+						./images/image/team/team-02_d.jpg    270w,
+						./images/image/team/team-02_t.jpg    354w,
+						./images/image/team/team-02_m.jpg    450w,
+						./images/image/team/team-02_d@2x.jpg 540w,
+						./images/image/team/team-02_t@2x.jpg 708w,
+						./images/image/team/team-02_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-02_m.jpg "
+					alt="Фото Ольги Рєпіної"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Ольга Рєпіна</h3>
 					<p lang="en" class="card__speciality">Frontend Developer</p>
@@ -189,7 +286,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/mykola.jpg" alt="Фото Миколи Тарасова">
+				<img 
+					srcset="
+						./images/image/team/team-03_d.jpg    270w,
+						./images/image/team/team-03_t.jpg    354w,
+						./images/image/team/team-03_m.jpg    450w,
+						./images/image/team/team-03_d@2x.jpg 540w,
+						./images/image/team/team-03_t@2x.jpg 708w,
+						./images/image/team/team-03_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-03_m.jpg "
+					alt="Фото Миколи Тарасова"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Микола Тарасов</h3>
 					<p lang="en" class="card__speciality">Marketing</p>
@@ -222,7 +332,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/misha.jpg" alt="Фото Михайла Єрмакова">
+				<img 
+					srcset="
+						./images/image/team/team-04_d.jpg    270w,
+						./images/image/team/team-04_t.jpg    354w,
+						./images/image/team/team-04_m.jpg    450w,
+						./images/image/team/team-04_d@2x.jpg 540w,
+						./images/image/team/team-04_t@2x.jpg 708w,
+						./images/image/team/team-04_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-04_m.jpg "
+					alt="Фото Михайла Єрмакова"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Михайло Єрмаков</h3>
 					<p lang="en" class="card__speciality">UI Designer</p>
@@ -372,58 +495,61 @@
 	</footer>
 <!-- Модалка -->
 	<div class="backdrop is-hidden" data-modal>
-			<div class="modal">
-				<button class="modal-close" data-modal-close>
-					<svg class="icon close-icon" width="18" height="18">
-						<use href="./images/sprite.svg#icon-close"></use>
-					</svg>
-				</button>
-				<form class="form js-speaker-form">
-					<b class="modal-title">Залиште свої дані, ми вам передзвонимо</b>
-
-					<label class="form-field">
-						<span class="modal-label">Ім'я</span>
-						<input class="modal-input" type="text" name="name" placeholder=" ">
-						<svg class="icon user-icon" width="18" height="18">
-							<use href="./images/sprite.svg#icon-user"></use>
+			<div class="container">
+				<div class="modal">
+					<button class="modal-close" data-modal-close>
+						<svg class="icon close-icon" width="18" height="18">
+							<use href="./images/sprite.svg#icon-close"></use>
 						</svg>
-					</label>
-
-					<label class="form-field">
-						<span class="modal-label">Телефон</span>
-						<input class="modal-input" type="tel" name="tel" placeholder=" ">
-						<svg class="icon tel-icon" width="18" height="18">
-							<use href="./images/sprite.svg#icon-tel"></use>
-						</svg>
-					</label>
-
-					<label class="form-field">
-						<span class="modal-label">Пошта</span>
-						<input class="modal-input" type="email" name="mail" placeholder=" ">
-						<svg class="icon post-icon" width="18" height="18">
-							<use href="./images/sprite.svg#icon-post"></use>
-						</svg>
-					</label>
-
-					<label class="form-field">
-						<span class="modal-label">Коментар</span>
-						<textarea class="modal-input" name="comment" rows="10" placeholder="Введіть текст"></textarea>
-					</label>
-
-					<label class="checkbox">
-						<input class="checkbox-input" type="checkbox" name="police">
-						<svg class="check-icon" width="16" height="15">
-							<use href="./images/sprite.svg#icon-check"></use>
-						</svg>
-						<span class="checkbox-text">Погоджуюся з розсилкою та приймаю <a href="" class="modal-link">Умови договору</a></span>
-					</label>
-
-					<label class="modal-btn-submit">
-						<button type="submit">Відправити</button>
-					</label>
-				</form>
+					</button>
+					<form class="form js-speaker-form">
+						<b class="modal-title">Залиште свої дані, ми вам передзвонимо</b>
+	
+						<label class="form-field">
+							<span class="modal-label">Ім'я</span>
+							<input class="modal-input" type="text" name="name" placeholder=" ">
+							<svg class="icon user-icon" width="18" height="18">
+								<use href="./images/sprite.svg#icon-user"></use>
+							</svg>
+						</label>
+	
+						<label class="form-field">
+							<span class="modal-label">Телефон</span>
+							<input class="modal-input" type="tel" name="tel" placeholder=" ">
+							<svg class="icon tel-icon" width="18" height="18">
+								<use href="./images/sprite.svg#icon-tel"></use>
+							</svg>
+						</label>
+	
+						<label class="form-field">
+							<span class="modal-label">Пошта</span>
+							<input class="modal-input" type="email" name="mail" placeholder=" ">
+							<svg class="icon post-icon" width="18" height="18">
+								<use href="./images/sprite.svg#icon-post"></use>
+							</svg>
+						</label>
+	
+						<label class="form-field">
+							<span class="modal-label">Коментар</span>
+							<textarea class="modal-input" name="comment" rows="10" placeholder="Введіть текст"></textarea>
+						</label>
+	
+						<label class="checkbox">
+							<input class="checkbox-input" type="checkbox" name="police">
+							<svg class="check-icon" width="16" height="15">
+								<use href="./images/sprite.svg#icon-check"></use>
+							</svg>
+							<span class="checkbox-text">Погоджуюся з розсилкою та приймаю <a href="" class="modal-link">Умови договору</a></span>
+						</label>
+	
+						<label class="modal-btn-submit">
+							<button type="submit">Відправити</button>
+						</label>
+					</form>
+				</div>
 			</div>
 	</div>
 	<script src="./js/modal.js"></script>
+	<script src="./js/mobile-menu.js"></script>
 </body>
 </html>

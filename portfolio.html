@@ -9,9 +9,22 @@
 </head>
 <body>
 <!-- Шапка сайту -->
-	<header class="header">
-		<div class="container header__flex">
-			<a href="./index.html" class="logo" lang="en"><span class="logo__span">Web</span>Studio</a>
+<header class="header">
+	<div class="container header__flex">
+		<a href="./index.html" class="logo" lang="en"><span class="logo__span">Web</span>Studio</a>
+		
+		<div class="header__navigation site-menu" id="header-navigation">
+			<button type="button" 
+				class="menu-button menu-button--close">
+				<svg
+					class="icon-burger" 
+					width="40" 
+					height="40"
+					aria-label="Кнопка закриття мобільного меню"
+				>
+					<use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+				</svg>
+			</button>
 			<nav>
 				<ul class="site-nav">
 					<li class="site-nav__item">
@@ -25,26 +38,54 @@
 			
 			<ul class="auth-nav">
 				<li class="auth-nav__item">
-					<a href="mailto:info@devstudio.com" class="auth-nav__link">
+					<a href="mailto:info@devstudio.com" class="auth-nav__link email-link">
 					<svg class="auth-nav__icon-email" width="16" height="12">
 						<use href="./images/sprite.svg#icon-email"></use>
 					</svg>
 					info@devstudio.com</a></li>
 				<li class="auth-nav__item">
-					<a href="tel:380977777777" class="auth-nav__link">
+					<a href="tel:380977777777" class="auth-nav__link phone-link">
 					<svg class="auth-nav__icon-phone" width="10" height="16">
 						<use href="./images/sprite.svg#icon-phone"></use>
 					</svg>
 					+38 097 777 77 77</a></li>
 			</ul>
+			<ul class="menu-social">
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Instagram</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Twitter</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Facebook</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">LinkedIn</a>
+				</li>
+			</ul>
 		</div>
-	</header>
+		<button type="button" 
+			class="menu-button menu-button--open"
+			aria-expanded="false"
+			aria-controls="header-navigation">
+			<svg
+				class="icon-burger" 
+				width="40" 
+				height="40"
+				aria-label="Кнопка відкриття мобільного меню"
+			>
+				<use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+			</svg>
+		</button>
+	</div>
+</header>
 <!-- Тіло сайту -->
 	<main>
 		<div class="container">
 			<h1 class="hidden">Наші роботи</h1>
 			<ul class="filter-list">
-				<li class="filter-list__item"><button  type="button" class="filter-list__button">Усі</button></li>
+				<li class="filter-list__item"><button  type="button" class="filter-list__button  filter-list__button--active">Усі</button></li>
 				<li class="filter-list__item"><button  type="button" class="filter-list__button">Веб-сайти</button></li>
 				<li class="filter-list__item"><button  type="button" class="filter-list__button">Додатки</button></li>
 				<li class="filter-list__item"><button  type="button" class="filter-list__button">Дизайн</button></li>
@@ -54,7 +95,21 @@
 			<ul class="project-list">
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_1.jpg" alt="Ноутбук на якому відкрита головна сторінка веб-сайту Технокряк" width="370">
+						<img
+							class="card__image"
+							srcset="
+								./images/image/portfolio/project-01_t.jpg    354w,
+								./images/image/portfolio/project-01_d.jpg    370w,
+								./images/image/portfolio/project-01_m.jpg    450w,
+								./images/image/portfolio/project-01_t@2x.jpg 708w,
+								./images/image/portfolio/project-01_d@2x.jpg 740w,
+								./images/image/portfolio/project-01_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-01_m.jpg" 
+							alt="Ноутбук на якому відкрита головна сторінка веб-сайту Технокряк" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -64,7 +119,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_2.jpg" alt="Постер двух баскетбольних команд New Orlean vs Golden Star" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-02_t.jpg    354w,
+								./images/image/portfolio/project-02_d.jpg    370w,
+								./images/image/portfolio/project-02_m.jpg    450w,
+								./images/image/portfolio/project-02_t@2x.jpg 708w,
+								./images/image/portfolio/project-02_d@2x.jpg 740w,
+								./images/image/portfolio/project-02_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-02_m.jpg" 
+							alt="Постер двух баскетбольних команд New Orlean vs Golden Star" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -74,7 +143,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_3.jpg" alt="Логотип ресторану Seafood" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-03_t.jpg    354w,
+								./images/image/portfolio/project-03_d.jpg    370w,
+								./images/image/portfolio/project-03_m.jpg    450w,
+								./images/image/portfolio/project-03_t@2x.jpg 708w,
+								./images/image/portfolio/project-03_d@2x.jpg 740w,
+								./images/image/portfolio/project-03_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-03_m.jpg" 
+							alt="Логотип ресторану Seafood" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -84,7 +167,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_4.jpg" alt="Повнорозмірні наушники проекту Prime" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-04_t.jpg    354w,
+								./images/image/portfolio/project-04_d.jpg    370w,
+								./images/image/portfolio/project-04_m.jpg    450w,
+								./images/image/portfolio/project-04_t@2x.jpg 708w,
+								./images/image/portfolio/project-04_d@2x.jpg 740w,
+								./images/image/portfolio/project-04_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-04_m.jpg" 
+							alt="Повнорозмірні наушники проекту Prime" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -94,7 +191,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_5.jpg" alt="Дві коробки проекту Boxes" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-05_t.jpg    354w,
+								./images/image/portfolio/project-05_d.jpg    370w,
+								./images/image/portfolio/project-05_m.jpg    450w,
+								./images/image/portfolio/project-05_t@2x.jpg 708w,
+								./images/image/portfolio/project-05_d@2x.jpg 740w,
+								./images/image/portfolio/project-05_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-05_m.jpg" 
+							alt="Дві коробки проекту Boxes" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -104,7 +215,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_6.jpg" alt="Монітор на якому відкита сторінка переваг веб-сайту Inspiration has no Borders" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-06_t.jpg    354w,
+								./images/image/portfolio/project-06_d.jpg    370w,
+								./images/image/portfolio/project-06_m.jpg    450w,
+								./images/image/portfolio/project-06_t@2x.jpg 708w,
+								./images/image/portfolio/project-06_d@2x.jpg 740w,
+								./images/image/portfolio/project-06_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-06_m.jpg" 
+							alt="Монітор на якому відкита сторінка переваг веб-сайту Inspiration has no Borders" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -114,7 +239,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_7.jpg" alt="Книга видання Limited Edition" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-07_t.jpg    354w,
+								./images/image/portfolio/project-07_d.jpg    370w,
+								./images/image/portfolio/project-07_m.jpg    450w,
+								./images/image/portfolio/project-07_t@2x.jpg 708w,
+								./images/image/portfolio/project-07_d@2x.jpg 740w,
+								./images/image/portfolio/project-07_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-07_m.jpg" 
+							alt="Книга видання Limited Edition" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -124,7 +263,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_8.jpg" alt="Логотип магазину LAB" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-08_t.jpg    354w,
+								./images/image/portfolio/project-08_d.jpg    370w,
+								./images/image/portfolio/project-08_m.jpg    450w,
+								./images/image/portfolio/project-08_t@2x.jpg 708w,
+								./images/image/portfolio/project-08_d@2x.jpg 740w,
+								./images/image/portfolio/project-08_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-08_m.jpg"
+							alt="Логотип магазину LAB" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -134,7 +287,21 @@
 				</a></li>
 				<li class="project-list__card card"><a class="card__link">
 					<div class="card__image-block">
-						<img class="card__image" src="./images/project_9.jpg" alt="Ноутбук на якому відкрита головна сторінка веб-сайту Growing Business" width="370">
+						<img 
+							class="card__image" 
+							srcset="
+								./images/image/portfolio/project-09_t.jpg    354w,
+								./images/image/portfolio/project-09_d.jpg    370w,
+								./images/image/portfolio/project-09_m.jpg    450w,
+								./images/image/portfolio/project-09_t@2x.jpg 708w,
+								./images/image/portfolio/project-09_d@2x.jpg 740w,
+								./images/image/portfolio/project-09_m@2x.jpg 900w
+							"
+							sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+							src="./images/image/portfolio/project-09_m.jpg" 
+							alt="Ноутбук на якому відкрита головна сторінка веб-сайту Growing Business" 
+							loading="lazy"
+						/>
 						<p class="card__emerging-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 					</div>
 					<div class="card__description">
@@ -207,5 +374,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
