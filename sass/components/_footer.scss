@@ -6,6 +6,10 @@
 
 .footer__logo {
 	color: var(--primary-white-color);
+
+	@media screen and (max-width: 1199px) {
+		margin: 0;
+	}
 }
 
 .footer__address {
@@ -14,6 +18,10 @@
 	color: var(--primary-white-color);
 	font-style: normal;
 	line-height: 1.71;
+
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
 }
 
 .address__item {
@@ -44,12 +52,29 @@
 }
 
 .footer__container {
-	display: flex;
-	align-items: baseline;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: baseline;
+	}
+
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 
 .footer__social {
-	margin-left: 70px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-left: 70px;
+	}
 }
 
 .footer__title {
